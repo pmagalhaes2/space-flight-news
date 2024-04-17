@@ -9,7 +9,8 @@ header {
     height: 100px;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 0 5rem;
+    max-width: 1240px;
+    padding: 0 2rem;
   }
   
   header nav#navbar .nav-brand {

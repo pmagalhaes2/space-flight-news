@@ -6,6 +6,7 @@
 
 body {
   background-color: #222222;
+  font-family: "Roboto", sans-serif;
   color: white;
 }
 
@@ -13,3 +14,11 @@ a {
   text-decoration: none;
 }
 
+section#articles {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1240px;
+  padding: 0 2rem;
+  margin: 4rem auto;
+}
