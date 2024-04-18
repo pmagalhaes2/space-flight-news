@@ -22,3 +22,10 @@ section#articles {
   padding: 0 2rem;
   margin: 4rem auto;
 }
+
+.loading {
+  align-items: center;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+}

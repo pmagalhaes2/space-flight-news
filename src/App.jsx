@@ -4,6 +4,7 @@ import { NavBar } from "./components/NavBar/NavBar";
 import { Article } from "./components/Article/Article";
 import axios from "axios";
 import { Footer } from "./components/Footer/Footer";
+import { ThreeDots } from "react-loader-spinner";
 
 function App() {
   const [news, setNews] = useState([]);
@@ -23,18 +24,32 @@ function App() {
   return (
     <>
       <NavBar />
-      <section id="articles">
-        {news.map((article) => (
-          <Article
-            key={article.id}
-            articleUrl={article.url}
-            title={article.title}
-            thumbnail={article.image_url}
-            provider={article.news_site}
-            description={article.summary}
+
+      {news.length ? (
+        <section id="articles">
+          {news.map((article) => (
+            <Article
+              key={article.id}
+              articleUrl={article.url}
+              title={article.title}
+              thumbnail={article.image_url}
+              provider={article.news_site}
+              description={article.summary}
+            />
+          ))}
+        </section>
+      ) : (
+        <div className="loading">
+          <ThreeDots
+            height="80"
+            width="80"
+            radius="9"
+            color="white"
+            ariaLabel="loading"
+            wrapperClass
           />
-        ))}
-      </section>
+        </div>
+      )}
       <Footer />
     </>
   );
