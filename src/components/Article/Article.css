@@ -1,12 +1,17 @@
 article {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 article .article-infos h2 {
+  color: #ffffff;
   font-size: 1.875rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
+}
+
+article .article-infos h2 a {
+  color: #ffffff;
 }
 
 article .article-infos h3 {
@@ -16,3 +21,12 @@ article .article-infos h3 {
   margin-bottom: 1rem;
 }
 
+article .article-infos p {
+  text-align: justify;
+}
+
+article img {
+  border-radius: 5px;
+  max-width: 350px;
+  object-fit: contain;
+}
